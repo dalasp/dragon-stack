@@ -5,7 +5,9 @@
   "main": "app/index.js",
   "scripts": {
     "start": "node ./bin/server",
-    "dev": "nodemon ./bin/server"
+    "dev": "nodemon ./bin/server",
+    "configure-dev": "npm run configure && npm run dev",
+    "configure": "sh ./bin/configure_db.sh"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^7.18.2"
   }
 }
